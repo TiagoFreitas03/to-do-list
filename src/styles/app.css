@@ -1,0 +1,47 @@
+.container {
+	width: 480px;
+}
+
+ul {
+	list-style: none;
+	padding: 4px 0;
+}
+
+.filters {
+	display: flex;
+	justify-content: space-around;
+	padding: 12px 0;
+	margin-bottom: 8px;
+}
+
+.filters button {
+	background: none;
+	color: white;
+	padding: 4px;
+	border-radius: 4px;
+}
+
+.filters button.selected {
+	border: 1px solid white;
+}
+
+footer {
+	padding: 12px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer button {
+	background: none;
+	border: none;
+	font-size: 14px;
+	color: white;
+	text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+	.container {
+		width: 400px;
+	}
+}
