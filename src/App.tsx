@@ -48,16 +48,24 @@ export function App() {
 			setActiveFilter('Todos')
 	}
 
-	function removeTask(index: number) {
+	function removeTask(id: number) {
 		const aux = tasks.slice()
-		aux.splice(index, 1)
-		setTasks(aux)
+		const pos = aux.map(task => task.id).findIndex(taskId => taskId === id)
+
+		if (pos >= 0) {
+			aux.splice(pos, 1)
+			setTasks(aux)
+		}
 	}
 
-	function toggleCompleted(index: number) {
+	function toggleCompleted(id: number) {
 		const aux = tasks.slice()
-		aux[index].completed = !aux[index].completed
-		setTasks(aux)
+		const pos = aux.map(task => task.id).findIndex(taskId => taskId === id)
+
+		if (pos >= 0) {
+			aux[pos].completed = !aux[pos].completed
+			setTasks(aux)
+		}
 	}
 
 	function removeCompleted() {
@@ -90,12 +98,12 @@ export function App() {
 
 			<ul>
 				{
-					filteredTasks.map((task, index) => (
+					filteredTasks.map(task => (
 						<Item
 							key={task.id}
 							task={task}
-							onRemove={() => removeTask(index)}
-							onToggleCompleted={() => toggleCompleted(index)}
+							onRemove={() => removeTask(task.id)}
+							onToggleCompleted={() => toggleCompleted(task.id)}
 						/>
 					))
 				}
