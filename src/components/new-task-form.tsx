@@ -21,7 +21,7 @@ export function NewTaskForm() {
 
       <button type="submit">
         Criar
-        <PlusCircle size={16} weight="bold" />
+        <PlusCircle size={20} weight="bold" />
       </button>
     </form>
   )

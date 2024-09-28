@@ -1,7 +1,7 @@
 .newTaskForm {
   display: flex;
   gap: 0.5rem;
-  margin-top: -2rem;
+  margin-top: -1.875rem;
 }
 
 .newTaskForm input {
