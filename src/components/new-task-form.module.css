@@ -1,0 +1,37 @@
+.newTaskForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -2rem;
+}
+
+.newTaskForm input {
+  height: 3.375rem;
+  flex: 1;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 1.0rem;
+}
+
+.newTaskForm button {
+  background-color: var(--blue-700);
+  color: var(--gray-100);
+  border: none;
+  border-radius: 8px;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  gap: 0.5rem;
+  line-height: 0;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.newTaskForm button:hover {
+  background-color: var(--blue-500);
+}

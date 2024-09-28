@@ -1,5 +1,17 @@
+import './global.css'
+import styles from './app.module.css'
+import { Header } from './components/header'
+import { NewTaskForm } from './components/new-task-form'
+
 export function App() {
   return (
-    <h1>To Do List</h1>
+    <>
+      <Header />
+
+      <div className={styles.wrapper}>
+        <NewTaskForm />
+      </div>
+
+    </>
   )
 }
